@@ -1,12 +1,16 @@
 {
-  "buildCommand": "cd notes-saas/frontend && npm install && npm run build",
-  "outputDirectory": "notes-saas/frontend/.next",
-  "installCommand": "cd notes-saas/frontend && npm install",
-  "framework": "nextjs",
-  "rewrites": [
+  "version": 2,
+  "name": "notesflow",
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/notes-saas/frontend/$1"
+      "src": "notes-saas/frontend/package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/notes-saas/frontend/$1"
     }
   ]
 }
