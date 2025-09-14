@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd notes-saas/frontend && npm install && npm run build",
+  "outputDirectory": "notes-saas/frontend/.next",
+  "installCommand": "cd notes-saas/frontend && npm install",
+  "framework": "nextjs",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/notes-saas/frontend/$1"
+    }
+  ]
+}
